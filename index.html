@@ -4,43 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Homepage</title>
-    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/navbar.css">
 </head>
 <body>
   <header><div class="nav__logo"> <span>Odyssée </span><span> des Voyageurs </span><span>Intrépides</span></div>
+    <nav class="nav">
+      <div class="nav__links">
+        <ul class="navbar">
+          <li>
+            <a href="" class="nav__item active">Home</a>
+          </li>
+          <li>
+            <a href="" class="nav__item">About</a>
+          </li>
+          <li>
+            <a class="nav__item">Contrie</a>
+            <ul class="navbar-list">
+              <li><a href="#">Morocco</a></li>
+              <li><a href="#">South Korea</a></li>
+              <li><a href="#">Sweden</a></li>
+            </ul>
+          </li>
+          <li>
+            <a class="nav__item">Guide</a>
+            <ul class="navbar-list">
+              <li><a href="#">Sabrine</a></li>
+              <li><a href="#">Océane</a></li>
+              <li><a href="#">Alexandre</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="" class="nav__item">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
   </header>
 <div class="container">
-  <nav class="nav">
-    <div class="nav__links">
-      <ul class="navbar">
-        <li>
-          <a href="" class="nav__item active">Home</a>
-        </li>
-        <li>
-          <a href="" class="nav__item">About</a>
-        </li>
-        <li>
-          <a class="nav__item">Contrie</a>
-          <ul class="navbar-list">
-            <li><a href="#">Morocco</a></li>
-            <li><a href="#">South Korea</a></li>
-            <li><a href="#">Sweden</a></li>
-          </ul>
-        </li>
-        <li>
-          <a class="nav__item">Guide</a>
-          <ul class="navbar-list">
-            <li><a href="#">Sabrine</a></li>
-            <li><a href="#">Océane</a></li>
-            <li><a href="#">Alexandre</a></li>
-          </ul>
-        </li>
-        <li>
-          <a href="" class="nav__item">Contact</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
+ 
     <div class="hero"><img id="plane" src="img/plane.jpg" alt="aeroport plane"/>
     </div>
     <section class="categories">
