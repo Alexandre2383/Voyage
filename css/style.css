@@ -57,9 +57,9 @@
 	width: 100%;
   }
   
-  img.sepia {
+  /* img.sepia {
 	filter: grayscale(25%) brightness(98%) contrast(80%) saturate(87%) sepia(50%);
-  }
+  } */
   
   .form__wrapper {
 	background: white;
