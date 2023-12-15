@@ -1,0 +1,58 @@
+.tabs {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.tab-registers {
+  border-radius: 25px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.tabs button {
+  padding: 0.5em;
+
+  font: inherit;
+}
+
+.tabs .tab-registers button:hover {
+  cursor: pointer;
+}
+
+.tab-bodies {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5em;
+  background-color: transparent;
+  overflow-y: visible;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#swedenmap {
+  max-width: 10%;
+  max-height: 10%;
+}
+#swedenmap:hover, #swedenmap:focus {
+  background-image: linear-gradient(rgba(7, 87, 7, 0.721), lightgrey);  border-radius: 10px;
+}
+.contenu1,
+.contenu2,
+.contenu3 {
+  display: none;
+  max-width: 60%;
+  border-radius: 20px;
+  padding: 8px;
+  background-image: linear-gradient(rgba(7, 87, 7, 0.721), lightgrey);
+}
+
+.presentationimage{
+  display: inline-flex;
+  justify-content: center;
+}
+.imagestockholm{
+  width: 40%;
+  padding: 16px;
+  border-radius: 25px;
+}
+

@@ -1,77 +1,63 @@
 .nav {
-  font-family: "Architects Daughter", cursive;
+  align-items: center;
+  font-family: "Skranji";
   font-size: clamp(1.2rem, 2vw, 1.5rem);
-  margin: 1rem 1rem 0;
-  position: sticky;
+  position: fixed;
+  width: 100%;
   top: 0;
   right: 0;
   z-index: 5;
-  text-transform: uppercase;
-  cursor: pointer;
+  min-height: 80px;
   background: url("https://assets.codepen.io/567707/bg-ricepaper.png");
-  border-end-end-radius: 15px;
+  color: black;
+  border-end-start-radius: 25px;
+  border-end-end-radius: 25px;
 }
-@media (min-width: 800px) {
+
+@media (max-width: 800px) {
   .nav {
     display: flex;
-    align-items: center;
+    flex-direction: row;
+    justify-content: end;
+    align-items: start;
   }
 }
 .navbar {
   display: flex;
   flex-direction: row;
-}
-.navbar li {
-  height: auto;
-  width: 130px;
-  float: left;
-  text-align: center;
-  list-style: none;
-}
-.navbar-list,
-.navbar-list::after {
-  font-size: clamp(1rem, 2vw, 1rem);
-  text-decoration: none;
-}
-.nav__logo {
-  font-family: "Multicolore", sans-serif;
-  font-weight: 600;
-  font-size: clamp(2rem, 4vw, 3rem);
-  line-height: 1;
-  letter-spacing: 0.05rem;
-}
-.nav__logo span {
-  color: var(--orange-80);
-}
-.nav__logo span:nth-child(1) {
-  color: var(--orange-blue);
-  display: inline-block;
-  margin-right: 0.1rem;
-}
-.nav__logo span:nth-child(2) {
-  color: var(--orange-40);
-}
-.nav__links {
-  flex: 0 0 auto;
-  margin: 0.5rem 0 0 auto;
+  justify-content: end;
 }
 .nav__item {
   display: inline-block;
   margin: 0.5rem;
   padding: 0 0.2rem 0.4rem;
+  font-size:x-large;
+  border-radius: 15px;
+  background: transparent;
 }
-.nav__item:hover {
-  color: var(--orange-80);
+.navbar li {
+  width: 130px;
+  text-align: center;
+  padding: 6px;
+  list-style: none;
+  
 }
-.nav__item:focus,
-.nav__item:active {
-  color: var(--orange-blue);
+.navbar-list,
+.navbar-list::after {
+  font-size: clamp(1rem, 2vw, 1rem);
+  text-decoration: none;
+  background-image: url('../img/bg-ricepaper.png');
 }
+
+.nav__links {
+  max-height: 5vh;
+  margin: 0.5rem 0 0 auto;
+}
+
 .nav__item.active {
-  color: var(--orange);
+  color: black;
   background-repeat: no-repeat;
   background-position: bottom center;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 150.72 13.59'%3E%3Cpath d='M3.21,13.56A789.68,789.68,0,0,1,147.47,7.82c4.35.23,4.33-6.53,0-6.75A788.78,788.78,0,0,0,3.21,6.8c-4.25.56-4.31,7.33,0,6.76Z' style='fill:%2361567a'/%3E%3C/svg%3E");
 }
 .nav-bar-list-item:hover li {
   display: block;
@@ -80,7 +66,6 @@
   text-decoration: none;
   display: block;
 }
-
 .navbar li ul {
   display: none;
   height: auto;
@@ -89,6 +74,8 @@
 }
 .navbar li:hover ul {
   display: block;
+  position: absolute;
+  width: 20vh;
 }
 .navbar a,
 a:link,

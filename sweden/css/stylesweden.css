@@ -1,0 +1,92 @@
+body {
+  margin: 0;
+  padding: 0;
+  color: antiquewhite;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  background-image: url('https://assets.codepen.io/567707/bg-ricepaper.png');
+
+}
+header {
+  min-height: 20vh;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 8px 0 16px;
+}
+
+main {
+  min-height: 250vh;
+  background-image: url('../img/wintersweden.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position:top;
+}
+
+.homevideo {
+  width: 100%;
+  height: 40vh;
+  object-fit: cover;
+}
+
+.hero {
+  position: relative;
+}
+.absolute {
+  position: absolute;
+}
+.filcontainer {
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+.maincard {
+  display: flex;
+  justify-content: space-around;
+  align-items: bottom;
+  padding: 0 16px 0;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.feature {
+  padding: 10px;
+  flex: 0 1 400px;
+  border-radius: 25px;
+  background-color: rgba(7, 87, 7, 0.721);
+  min-height: 30vh;
+  transform: translateY(-20%);
+}
+.descriptionstockholm,
+.descriptionsweden {
+  background-image: url('../img/armoirieStockholm1.png');
+  background-size: 20%;
+  background-position-x: 108%;
+  background-position-y: -5%;
+  background-repeat: no-repeat;
+  text-align: start;
+}
+.descriptionsweden {
+  background-image: url('../img/sweden-flag.jpg');
+  background-position-x: right;
+  background-position-y: top;
+}
+/*2eme Article------------------------------------------------------------------------*/
+.selection {
+  min-height: 10vh;
+}
+
+h2,h3 {
+  text-align: center;
+}
+p {
+  margin: 16px 8px;
+}

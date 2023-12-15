@@ -1,0 +1,16 @@
+/* Image Background <- dossier image */
+footer{
+    background-image: url(/img/bg-ricepaper.png);
+    width: 100%;
+    min-height: 8vh;
+    color: black;
+    text-align: center;
+}
+.placement_icon{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.icon{
+    width: max-content;
+}
