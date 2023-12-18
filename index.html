@@ -4,41 +4,60 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Homepage</title>
-    <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="css/navbar.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/navbar2.css" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     <header>
       <nav class="nav">
-       <!-- TODO Rajouter logo -->
-        <div class="nav__links">
-          <ul class="navbar">
+        <div class="nav-mobile">
+          <a id="nav-toggle" href="#!"><span></span></a>
+        </div>
+        <div class="positionnav">
+          <a class="listlogo" href="#"
+            ><img src="img/Sans titre.jpg" class="logo"
+          /></a>
+          <ul class="nav-list">
             <li>
-              <a href="index.html" class="nav__item active">Home</a>
-            </li>
-            <li>
-              <a class="nav__item">Countries</a>
-              <ul class="navbar-list">
-                <li><a href="#">Morocco</a></li>
-                <li><a href="#">South Korea</a></li>
-                <li><a href="sweden/sweden.html">Sweden</a></li>
+              <a href="#">Countries</a>
+              <ul class="nav-dropdown">
+                <li>
+                  <a href="#">Morocco</a>
+                </li>
+                <li>
+                  <a href="#">South Korea</a>
+                </li>
+                <li>
+                  <a href="#" class="navbordure">Sweden</a>
+                </li>
               </ul>
             </li>
             <li>
-              <a class="nav__item">Guides</a>
-              <ul class="navbar-list">
-                <li><a href="#">Sabrine</a></li>
-                <li><a href="#">Océane</a></li>
-                <li><a href="sweden/sweden.html">Alexandre</a></li>
+              <a href="#!">Guides</a>
+              <ul class="nav-dropdown">
+                <li>
+                  <a href="#">Sabrine</a>
+                </li>
+                <li>
+                  <a href="#">Océane</a>
+                </li>
+                <li>
+                  <a href="#" class="navbordure">Alexandre</a>
+                </li>
               </ul>
+            </li>
+            <li>
+              <a href="#!">Log In</a>
+            </li>
+            <li>
+              <a href="#">Sign Up</a>
             </li>
           </ul>
         </div>
       </nav>
     </header>
     <main>
-      <!-- A modifié -->
       <div class="container">
         <div class="hero">
           <img id="plane" src="img/plane.jpg" alt="aeroport plane" />
@@ -57,19 +76,16 @@
           </div>
           <div class="categories__choices">
             <div class="categories__item">
-              <a href="sweden/sweden.html"><img
-                class="photo"
-                src="img/Saluhall.jpg"
-                alt="Hall marché, centre de stockholm"
+              <a href="sweden/sweden.html"
+                ><img
+                  class="photo"
+                  src="img/Saluhall.jpg"
+                  alt="Hall marché, centre de stockholm"
               /></a>
               <h5 class="titreSweden">Sweden</h5>
             </div>
             <div class="categories__item">
-              <img
-                class="photo"
-                src="img/Seoul.jpg"
-                alt="Seoul, à décrire"
-              />
+              <img class="photo" src="img/seoul2.jpg" alt="Seoul, à décrire" />
               <h5 class="titreSouthKorea">South Korea</h5>
             </div>
             <div class="categories__item">
@@ -80,6 +96,35 @@
               />
               <h5 class="titreMaroc">Morocco</h5>
             </div>
+          </div>
+        </section>
+        <section class="guidesection">
+          <div class="containerguide">
+            <img src="img/animalferocealex.jpg" alt="" class="photoguide"/>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos odit
+              perspiciatis nulla pariatur quasi? Perspiciatis quasi, obcaecati
+              quibusdam voluptas at reiciendis dolore aut quaerat ut est magnam
+              ullam natus quia.
+            </p>
+          </div>
+          <div class="containerguide">
+            <img src="img/tigreocean.jpg" alt="" class="photoguide"/>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos odit
+              perspiciatis nulla pariatur quasi? Perspiciatis quasi, obcaecati
+              quibusdam voluptas at reiciendis dolore aut quaerat ut est magnam
+              ullam natus quia.
+            </p>
+          </div>
+          <div class="containerguide">
+            <img src="img/lionsabrine.jpg" alt="" class="photoguide"/>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos odit
+              perspiciatis nulla pariatur quasi? Perspiciatis quasi, obcaecati
+              quibusdam voluptas at reiciendis dolore aut quaerat ut est magnam
+              ullam natus quia.
+            </p>
           </div>
         </section>
       </div>
@@ -94,5 +139,7 @@
       </div>
       <p>©Copyright 2024. Tous droits reservées.</p>
     </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>
