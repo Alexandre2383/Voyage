@@ -209,7 +209,7 @@ h2 {
 }
 
 [data-type="rabat"] .content__left {
-  background-image: url("img/hassan-tower-xlarge.jpg");
+  background-image: url("../img/hassan-tower-xlarge.jpg");
   background-position: center;
   background-image: cover;
 }
@@ -217,40 +217,40 @@ h2 {
   background-image: none;
 }
 [data-type="aitbenhaddou"] .content__left {
-  background-image: url("img/aït-benhaddou-3.jpg");
+  background-image: url("../img/aït-benhaddou-3.jpg");
   background-position: center;
 }
 .spinner--right [data-type="aitbenhaddou"] .content__left {
   background-image: none;
 }
 [data-type="ouzoud"] .content__left {
-  background-image: url("img/cascades-douzoud-1280x1600.jpg");
+  background-image: url("../img/cascades-douzoud-1280x1600.jpg");
 }
 .spinner--right [data-type="ouzoud"] .content__left {
   background-image: none;
 }
 [data-type="merzouga"] .content__left {
-  background-image: url("img/Merzouga-quad-dunes.jpg");
+  background-image: url("../img/Merzouga-quad-dunes.jpg");
 }
 .spinner--right [data-type="merzouga"] .content__left {
   background-image: none;
 }
 [data-type="casablanca"] .content__left {
-  background-image: url("img/hassan-ii-mosque-3.jpg");
+  background-image: url("../img/hassan-ii-mosque-3.jpg");
   background-position: center;
 }
 .spinner--right [data-type="casablanca"] .content__left {
   background-image: none;
 }
 [data-type="fez"] .content__left {
-  background-image: url("img/fez.jpg");
+  background-image: url("../img/fez.jpg");
   background-position: center;
 }
 .spinner--right [data-type="fez"] .content__left {
   background-image: none;
 }
 [data-type="volubilis"] .content__left {
-  background-image: url("img/volubilis.jpg");
+  background-image: url("../img/volubilis.jpg");
   background-position: center;
 }
 
@@ -258,35 +258,35 @@ h2 {
   background-image: none;
 }
 [data-type="tangier"] .content__left {
-  background-image: url("img/tangier.jpg");
+  background-image: url("../img/tangier.jpg");
   background-position: center;
 }
 .spinner--right [data-type="tangier"] .content__left {
   background-image: none;
 }
 [data-type="chefchaouen"] .content__left {
-  background-image: url("img/chefchaouen\ 09.49.12.jpg");
+  background-image: url("../img/chefchaouen\ 09.49.12.jpg");
   background-position: center;
 }
 .spinner--right [data-type="chefchaouen"] .content__left {
   background-image: none;
 }
 [data-type="marrakech"] .content__left {
-  background-image: url("img/HD-wallpaper-morocco-marrakech-africa-city-mosque-red-city.jpg");
+  background-image: url("../img/HD-wallpaper-morocco-marrakech-africa-city-mosque-red-city.jpg");
   background-position: center;
 }
 .spinner--right [data-type="marrakech"] .content__left {
   background-image: none;
 }
 [data-type="essaouira"] .content__left {
-  background-image: url("img/essaouira.jpeg");
+  background-image: url("../img/essaouira.jpeg");
   background-position: center;
 }
 .spinner--right [data-type="essaouira"] .content__left {
   background-image: none;
 }
 [data-type="ifrane"] .content__left {
-  background-image: url("img/VjRebyq.jpeg");
+  background-image: url("../img/VjRebyq.jpeg");
   background-position: center;
 }
 .spinner--right [data-type="ifrane"] .content__left {
