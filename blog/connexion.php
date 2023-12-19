@@ -10,7 +10,7 @@ if($_SERVER["REQUEST_METHOD"] === "POST") {
     $servername = "localhost";
     $username = "root";
     $password = "";
-    $dbname = "jour05utilisateurs"; 
+    $dbname = "Blog_Voyage"; 
 
     // Création d'une connexion
     $conn = new mysqli($servername, $username, $password, $dbname);
@@ -35,7 +35,7 @@ if($_SERVER["REQUEST_METHOD"] === "POST") {
         // Vérification du mot de passe
         if (password_verify($password, $user['password'])) {
             // Création de la session pour l'utilisateur connecté
-            $_SESSION['prenom'] = $user['prenom'];
+            $_SESSION['login'] = $user['login'];
             $_SESSION['email'] = $user['email'];
 
             // Redirection vers la page d'accueil après connexion réussie
