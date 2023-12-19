@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>Profil</title>
 </head>
 <body>
     <?php
         session_start();
-        if(isset($_SESSION['prenom'])) {//si le prenom après la connexion est défini
-            $prenom = $_SESSION['prenom'];
+        if(isset($_SESSION['login'])) {//si le prenom après la connexion est défini
+            $prenom = $_SESSION['login'];
             echo "<p>Bonjour $prenom</p>";//affiche Bonjour $prenom
             echo "<a href='../index.html'>retour à la page principal</a>";
         } else {
