@@ -1,0 +1,314 @@
+/* JS Carousel------------------------ */
+.js-transitions-disabled * {
+  transition: none !important;
+}
+
+h2 {
+  font-size: 30px;
+  text-align: center;
+}
+.carousel {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+  perspective: 50vw;
+  perspective-origin: 50% 50%;
+}
+.carousel__control {
+  position: absolute;
+  height: 160px;
+  width: 40px;
+  background: #fff;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: 1;
+}
+.carousel__control a {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding-top: 75%;
+  box-sizing: border-box;
+}
+.carousel__control a:hover:before {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.carousel__control a.active:before,
+.carousel__control a.active:hover:before {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.carousel__control a:first-child {
+  margin-top: 15px;
+}
+.carousel__control a:before {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  border-radius: 50%;
+  padding-top: 25%;
+  width: 25%;
+  background: rgba(0, 0, 0, 0.2);
+  content: "";
+  display: block;
+  margin-top: -12.5%;
+}
+.carousel__stage {
+  position: absolute;
+  top: 20px;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  margin: auto;
+  transform-style: preserve-3d;
+  transform: translateZ(calc(-50vh + 20px));
+}
+.spinner {
+  position: absolute;
+  width: calc(50vw - (20px));
+  height: calc(100vh - 40px);
+  top: 0;
+  left: 0;
+  right: auto;
+  bottom: 0;
+  margin: auto;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  transform-origin: 50% 50%;
+  transform: rotateX(0);
+}
+.js-spin-fwd .spinner {
+  transform: rotateX(-90deg);
+}
+.js-spin-bwd .spinner {
+  transform: rotateX(90deg);
+}
+.js-spin-fwd .spinner--right {
+  transform: rotateX(90deg);
+}
+.js-spin-bwd .spinner--right {
+  transform: rotateX(-90deg);
+}
+.spinner--right {
+  right: 0;
+  left: auto;
+}
+.spinner__face {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.spinner__face.js-next {
+  display: block;
+  transform: rotateX(90deg) translateZ(calc(50vh - 20px));
+}
+.spinner--right .spinner__face.js-next {
+  transform: rotateX(270deg) translateZ(calc(50vh - 20px));
+}
+.js-spin-bwd .spinner__face.js-next {
+  transform: rotateX(-90deg) translateZ(calc(50vh - 20px));
+}
+.js-spin-bwd .spinner--right .spinner__face.js-next {
+  transform: rotateX(-270deg) translateZ(calc(50vh - 20px));
+}
+.js-active {
+  display: block;
+  transform: translateZ(calc(50vh - 20px));
+}
+.content {
+  position: absolute;
+  width: 200%;
+  height: 100%;
+  left: 0;
+}
+.spinner--right .content {
+  left: -100%;
+}
+.content__left,
+.content__right {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 50%;
+  height: 100%;
+}
+.content__right {
+  right: 0;
+  left: auto;
+}
+
+.content__left {
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.content__left:after {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.1);
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.content__left h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-top: -3vw;
+  text-align: center;
+  font-family: "Londrina Solid";
+  font-size: 6vw;
+  height: 10vw;
+  opacity: 0.8;
+  color: black;
+  width: 100%;
+  letter-spacing: 0.15em;
+  line-height: 0.6;
+}
+.content__right {
+  display: flex;
+  align-items: center;
+  justify-content: justify;
+}
+.content__right .content__main {
+  position: absolute;
+  font-family: Merriweather, serif;
+  text-align: justify;
+  color: #fff;
+  font-size: 2vw;
+  padding-right: 2rem;
+  padding-left: 2rem;
+  line-height: 1.65;
+  font-weight: 300;
+  margin: 0;
+  opacity: 0.8;
+}
+.content__right .content__main p:last-child {
+  font-size: 0.85em;
+}
+.content__right .content__index {
+  font-size: 20vh;
+  position: absolute;
+  right: -1vh;
+  top: 35vh;
+  opacity: 0.04;
+  font-family: oswald;
+  color: #fff;
+  z-index: 99;
+}
+
+[data-type="rabat"] .content__left {
+  background-image: url("img/hassan-tower-xlarge.jpg");
+  background-position: center;
+  background-image: cover;
+}
+.spinner--right [data-type="rabat"] .content__left {
+  background-image: none;
+}
+[data-type="aitbenhaddou"] .content__left {
+  background-image: url("img/aït-benhaddou-3.jpg");
+  background-position: center;
+}
+.spinner--right [data-type="aitbenhaddou"] .content__left {
+  background-image: none;
+}
+[data-type="ouzoud"] .content__left {
+  background-image: url("img/cascades-douzoud-1280x1600.jpg");
+}
+.spinner--right [data-type="ouzoud"] .content__left {
+  background-image: none;
+}
+[data-type="merzouga"] .content__left {
+  background-image: url("img/Merzouga-quad-dunes.jpg");
+}
+.spinner--right [data-type="merzouga"] .content__left {
+  background-image: none;
+}
+[data-type="casablanca"] .content__left {
+  background-image: url("img/hassan-ii-mosque-3.jpg");
+  background-position: center;
+}
+.spinner--right [data-type="casablanca"] .content__left {
+  background-image: none;
+}
+[data-type="fez"] .content__left {
+  background-image: url("img/fez.jpg");
+  background-position: center;
+}
+.spinner--right [data-type="fez"] .content__left {
+  background-image: none;
+}
+[data-type="volubilis"] .content__left {
+  background-image: url("img/volubilis.jpg");
+  background-position: center;
+}
+
+.spinner--right [data-type="volubilis"] .content__left {
+  background-image: none;
+}
+[data-type="tangier"] .content__left {
+  background-image: url("img/tangier.jpg");
+  background-position: center;
+}
+.spinner--right [data-type="tangier"] .content__left {
+  background-image: none;
+}
+[data-type="chefchaouen"] .content__left {
+  background-image: url("img/chefchaouen\ 09.49.12.jpg");
+  background-position: center;
+}
+.spinner--right [data-type="chefchaouen"] .content__left {
+  background-image: none;
+}
+[data-type="marrakech"] .content__left {
+  background-image: url("img/HD-wallpaper-morocco-marrakech-africa-city-mosque-red-city.jpg");
+  background-position: center;
+}
+.spinner--right [data-type="marrakech"] .content__left {
+  background-image: none;
+}
+[data-type="essaouira"] .content__left {
+  background-image: url("img/essaouira.jpeg");
+  background-position: center;
+}
+.spinner--right [data-type="essaouira"] .content__left {
+  background-image: none;
+}
+[data-type="ifrane"] .content__left {
+  background-image: url("img/VjRebyq.jpeg");
+  background-position: center;
+}
+.spinner--right [data-type="ifrane"] .content__left {
+  background-image: none;
+}
+h1 {
+  margin: 0;
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  letter-spacing: -4px;
+  font-size: 100px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+h1::before,
+h1::after {
+  width: 220px;
+  height: 1px;
+  border-top: 4px double #fff;
+  content: "";
+  display: block;
+  margin: 20px auto;
+}
