@@ -1,47 +1,57 @@
-/* JS Carousel------------------------ */
+html,
+body {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  background-color: antiquewhite;
+}
+body {
+  background: antiquewhite;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
 .js-transitions-disabled * {
   transition: none !important;
-}
-
-h2 {
-  font-size: 30px;
-  text-align: center;
 }
 .carousel {
   position: relative;
   height: 100%;
-  overflow: hidden;
+  /* overflow: hidden; */
   perspective: 50vw;
   perspective-origin: 50% 50%;
+  /* margin-top: 70px; */
+  /* margin-bottom: 150px; */
+  display: flex;
+  align-items: center;
 }
 .carousel__control {
-  position: absolute;
+  /* position: absolute; */
+  position: relative;
   height: 160px;
   width: 40px;
   background: #fff;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  margin: auto;
+  right: 10px;
+  top: 75px;
+  /* bottom: 0; */
+  margin-left: auto;
   z-index: 1;
 }
 .carousel__control a {
   position: relative;
-  display: block;
+  display: inline-block;
   width: 100%;
-  padding-top: 75%;
+  padding-top: 100%;
   box-sizing: border-box;
 }
 .carousel__control a:hover:before {
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0,0,0,0.4);
 }
 .carousel__control a.active:before,
 .carousel__control a.active:hover:before {
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0,0,0,0.6);
 }
-.carousel__control a:first-child {
-  margin-top: 15px;
-}
+/* .carousel__control a:first-child {
+   margin-top: 15px; 
+} */
 .carousel__control a:before {
   position: absolute;
   top: 50%;
@@ -51,8 +61,8 @@ h2 {
   border-radius: 50%;
   padding-top: 25%;
   width: 25%;
-  background: rgba(0, 0, 0, 0.2);
-  content: "";
+  background: rgba(0,0,0,0.2);
+  content: '';
   display: block;
   margin-top: -12.5%;
 }
@@ -78,7 +88,7 @@ h2 {
   transform-style: preserve-3d;
   transition: transform 1s;
   -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
+          backface-visibility: hidden;
   transform-origin: 50% 50%;
   transform: rotateX(0);
 }
@@ -143,9 +153,7 @@ h2 {
   right: 0;
   left: auto;
 }
-
 .content__left {
-  position: relative;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -155,70 +163,69 @@ h2 {
   content: "";
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.1);
-  top: 0;
-  left: 0;
-  z-index: 1;
+  background-color: rgba(0,0,0,0.1);
 }
 .content__left h1 {
   position: absolute;
   top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   margin-top: -3vw;
   text-align: center;
-  font-family: "Londrina Solid";
-  font-size: 6vw;
+  font-family: oswald;
+  font-size: 5vw;
   height: 10vw;
-  opacity: 0.8;
-  color: black;
+  opacity: 1;
+  color: #fff;
   width: 100%;
   letter-spacing: 0.15em;
   line-height: 0.6;
 }
+.content__left span {
+  font-size: 1vw;
+  font-weight: 300;
+  letter-spacing: 0.2em;
+  opacity: 0.9;
+  font-family: Merriweather;
+}
 .content__right {
   display: flex;
   align-items: center;
-  justify-content: justify;
+  justify-content: center;
 }
 .content__right .content__main {
   position: absolute;
   font-family: Merriweather, serif;
-  text-align: justify;
+  text-align: left;
   color: #fff;
-  font-size: 2vw;
-  padding-right: 2rem;
-  padding-left: 2rem;
+  font-size: 1.3vw;
+  padding: 0 8vw;
   line-height: 1.65;
   font-weight: 300;
   margin: 0;
   opacity: 0.8;
 }
 .content__right .content__main p:last-child {
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
   font-size: 0.85em;
 }
 .content__right .content__index {
-  font-size: 20vh;
+  font-size: 30vh;
   position: absolute;
   right: -1vh;
   top: 35vh;
   opacity: 0.04;
   font-family: oswald;
   color: #fff;
-  z-index: 99;
 }
-
 [data-type="rabat"] .content__left {
   background-image: url("../img/hassan-tower-xlarge.jpg");
   background-position: center;
-  background-image: cover;
 }
 .spinner--right [data-type="rabat"] .content__left {
   background-image: none;
 }
 [data-type="aitbenhaddou"] .content__left {
-  background-image: url("../img/aït-benhaddou-3.jpg");
-  background-position: center;
+  background-image: url("../img/aït-benhaddou-3.jpg");
 }
 .spinner--right [data-type="aitbenhaddou"] .content__left {
   background-image: none;
@@ -236,79 +243,128 @@ h2 {
   background-image: none;
 }
 [data-type="casablanca"] .content__left {
-  background-image: url("../img/hassan-ii-mosque-3.jpg");
-  background-position: center;
+    background-image: url("../img/hassan-ii-mosque-3.jpg");
+    background-position: center;
 }
 .spinner--right [data-type="casablanca"] .content__left {
-  background-image: none;
+    background-image: none;
 }
 [data-type="fez"] .content__left {
-  background-image: url("../img/fez.jpg");
-  background-position: center;
+    background-image: url("../img/fez.jpg");
 }
 .spinner--right [data-type="fez"] .content__left {
-  background-image: none;
+    background-image: none;
 }
 [data-type="volubilis"] .content__left {
-  background-image: url("../img/volubilis.jpg");
-  background-position: center;
+    background-image: url("../img/volubilis.jpg");
+    background-position: center;
 }
-
 .spinner--right [data-type="volubilis"] .content__left {
-  background-image: none;
+    background-image: none;
 }
 [data-type="tangier"] .content__left {
-  background-image: url("../img/tangier.jpg");
-  background-position: center;
+    background-image: url("../img/tangier.jpg");
+    background-position: center;
 }
 .spinner--right [data-type="tangier"] .content__left {
-  background-image: none;
+    background-image: none;
 }
 [data-type="chefchaouen"] .content__left {
-  background-image: url("../img/chefchaouen\ 09.49.12.jpg");
-  background-position: center;
+    background-image: url("../img/chefchaouen\ 09.49.12.jpg");
+    background-position: center;
 }
 .spinner--right [data-type="chefchaouen"] .content__left {
-  background-image: none;
+    background-image: none;
 }
 [data-type="marrakech"] .content__left {
-  background-image: url("../img/HD-wallpaper-morocco-marrakech-africa-city-mosque-red-city.jpg");
-  background-position: center;
+    background-image: url("../img/HD-wallpaper-morocco-marrakech-africa-city-mosque-red-city.jpg");
+    
 }
 .spinner--right [data-type="marrakech"] .content__left {
-  background-image: none;
+    background-image: none;
 }
 [data-type="essaouira"] .content__left {
-  background-image: url("../img/essaouira.jpeg");
-  background-position: center;
+    background-image: url("../img/essaouira.jpeg");
+    background-position: center;
 }
 .spinner--right [data-type="essaouira"] .content__left {
-  background-image: none;
+    background-image: none;
 }
 [data-type="ifrane"] .content__left {
-  background-image: url("../img/VjRebyq.jpeg");
-  background-position: center;
+    background-image: url("../img/VjRebyq.jpeg");
 }
 .spinner--right [data-type="ifrane"] .content__left {
-  background-image: none;
+    background-image: none;
 }
-h1 {
-  margin: 0;
-  display: table-cell;
-  vertical-align: middle;
-  text-align: center;
-  letter-spacing: -4px;
-  font-size: 100px;
-  font-weight: 700;
-  text-transform: uppercase;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+
+/* Larger screens (desktops, laptops) */
+@media (min-width: 992px) {
+
+
+  header {
+    height: calc(100% - 80px); /* Adjust header height for larger screens */
+  }
+
+  .carousel {
+    height: 80%; /* Adjust carousel height for larger screens */
+  }
+
+  #wrapper {
+    display: block;
+    align-items: center;
+    height: 115vh;
+    max-width: 75rem;
+    margin: 0 auto;
 }
-h1::before,
-h1::after {
-  width: 220px;
-  height: 1px;
-  border-top: 4px double #fff;
-  content: "";
-  display: block;
-  margin: 20px auto;
+}
+
+/* Medium screens (tablets) */
+@media (max-width: 991px) {
+
+  header {
+    height: calc(100% - 60px); /* Adjust header height for tablets */
+  }
+
+  .carousel {
+    height: 70%; /* Adjust carousel height for tablets */
+  }
+  #wrapper {
+    display: block;
+    align-items: center;
+    height: 75vh;
+    max-width: 45rem;
+    margin: 0 auto;
+}
+}
+
+/* Small screens (phones) */
+@media (max-width: 767px) {
+
+  header {
+    height: calc(100% - 500px);
+}
+  .carousel {
+    height: 60%; /* Adjust carousel height for phones */
+  }
+
+  #wrapper {
+    display: block;
+    align-items: center;
+    height: 85vh;
+    max-width: 30rem;
+    margin: 0 auto;
+}
+.tabs{
+  font-size: 10px;
+}
+.tab-control{
+  font-size: 15px;
+}
+#item1 {
+  height: 100%;
+  width: 100%;
+  flex: 1;
+  padding-top: 20vh;
+  padding-bottom: 7vh;
+}
 }

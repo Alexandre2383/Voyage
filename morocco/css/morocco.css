@@ -17,7 +17,11 @@ header {
   perspective: 1500px;
   perspective-origin: center bottom;
 }
-
+@media (max-width: 767px) {
+  header {
+    height: calc(100% - 50px); /* Adjust height for smaller screens */
+  }
+}
 .hero {
   /* position: relative; */
   background: #333;
@@ -57,6 +61,12 @@ header {
   height: auto;
   transform: translate(-50%, -50%);
   z-index: -1000;
+}
+@media (max-width: 767px) {
+  #video-bg {
+    width: 100%; /* Adjust width for smaller screens */
+    height: auto; /* Set height to auto for responsiveness */
+  }
 }
 nav {
   background: #171717;
@@ -120,48 +130,72 @@ nav ul a {
 }
 /* Main */
 main{
-  height:100%;
-  width: 100%;
+  min-height: calc(100vh - 8vh);
+  /* position: relative; */
+  display: flex;
+  flex-direction: column;
+  /* overflow: hidden; */
 }
 /* section--------------------------- */
 
 #item1 {
-  background: antiquewhite;
   height: 100%;
   width: 100%;
+  flex: 1;
+  padding-top: 15vh;
 }
+
 #item2 {
-  background: antiquewhite;
   height: 100%;
   width: 100%;
   /* margin-top: 50px; */
   /* min-height: 700px; */
   /* overflow-y: scroll; */
-  transform: translateY(40%);
-}
-
-
-
-.article {
-  display: flex;
-  align-items: center;
-}
-
-.content {
+  transform: translateY(10%);
+  margin-top: 5vh;
   flex: 1;
+  padding-bottom: 15vh;
 }
-
-.image {
-  margin-left: 20px; /* Adjust margins as needed */
+@media (min-width: 992px) {
+  #item1 {
+    height: 200px;
+    padding-top: 25vh;
+    padding-bottom: 8vh;
+  }
+  #item2 {
+    height: 400px;
+    padding-bottom: 0vh;
+  }
 }
+@media (min-width: 768px) and (max-width: 991px) {
+  #item1 {
+    height: 150px; 
+    padding-top: 20vh;
+    padding-bottom: 15vh;
+    
+  }
+  #item2 {
+    height: 300px;
+    padding-bottom: 0vh;
+    margin-top: 0vh;
+  }
 
-.image img {
-  max-width: 100%; /* Ensure images don't exceed their container */
-  height: auto; /* Maintain aspect ratio */
+  @media (max-width: 767px) {
+
+  }
+  #item2 {
+    height: 300px; /* Adjust the height for smaller screens */
+    padding-bottom: 55vh;
+    margin-top: 0vh;
+  }
+  #wrapper {
+    display: block;
+    align-items: center;
+    height: 20vh;
+    max-width: 80rem;
+    margin: 0 auto;
+  }
 }
-
-
-
 p {
   margin-bottom: 1rem;
 }
@@ -170,7 +204,7 @@ p {
   display: block;
   align-items: center;
   height: 100vh;
-  max-width: 45rem;
+  max-width: 80rem;
   margin: 0 auto;
 }
 
@@ -268,6 +302,7 @@ h3 {
   border: 3px solid #333;
   border-radius: 50%;
   transition: color 0.2s ease-in-out;
+  z-index: 2;
 }
 
 #back-to-top-btn:hover {
@@ -284,6 +319,7 @@ h3 {
     font-size: 22px;
     width: 40px;
     height: 40px;
+    z-index: 2
   }
 }
 /* Button Animations */
@@ -317,14 +353,15 @@ h3 {
 }
 /* Footer */
 footer {
-  background-image: url("img/bg-ricepaper.png");
+  background-image: url("../img/bg-ricepaper.png");
   min-height: 8vh;
   color: black;
   text-align: center;
-  z-index: 2;
+  position: relative;
 }
 footer p {
   margin: 0;
+
 }
 .placement_icon {
   display: flex;
@@ -333,4 +370,11 @@ footer p {
 }
 .icon {
   width: max-content;
+}
+@media (max-width: 767px) {
+  #footer {
+    position: relative; /* Adjust position for smaller screens */
+    min-height: 100px; /* Adjust height for smaller screens */
+    min-height: 15vh;
+  }
 }
