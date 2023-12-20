@@ -1,11 +1,11 @@
 <?php
 session_start();
-if(isset($_SESSION['login'])) {//Si prenom est déjà défini, alors affiche directement l'acceuil
+if (isset($_SESSION['login'])) { //Si prenom est déjà défini, alors affiche directement l'acceuil
     header("Location: profil.php");
     exit();
 }
 
-if($_SERVER["REQUEST_METHOD"] === "POST") {
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
     // Connexion à votre base de données (remplacez les informations par les vôtres)
     $servername = "localhost";
     $username = "root";
@@ -29,8 +29,8 @@ if($_SERVER["REQUEST_METHOD"] === "POST") {
     // $hashed_password = $password;// password_hash($password, PASSWORD_DEFAULT) hashage par défault du password
 
     // Préparation de la requête SQL pour l'insertion des données dans la table 'utilisateurs' -> 'nom', 'prenom', 'email', 'password'
-    $sql = "INSERT INTO utilisateurs (login, email, password) VALUES ('$login', '$email', '$password')";
-    $id_droit = "SELECT utilisateurs.id_droits, droits.name FROM utilisateurs JOIN droits ON utilisateurs.id_droits = droits.id;";
+    $sql = "INSERT INTO utilisateurs (login, email, password, id_droits) VALUES ('$login', '$email', '$password', 1)";
+
     // Exécution de la requête et vérification de son succès
     if ($conn->query($sql) === TRUE) {
         // Redirection vers la page de connexion après inscription réussie
@@ -47,23 +47,92 @@ if($_SERVER["REQUEST_METHOD"] === "POST") {
 
 <!DOCTYPE html>
 <html>
+
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/navbar2.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="./css/style-connexion-inscription-profil.css">
     <title>Inscription</title>
-    <script src="script.js" defer></script>
 </head>
+<header>
+    <nav class="nav">
+        <div class="nav-mobile">
+            <a id="nav-toggle" href="#!"><span></span></a>
+        </div>
+        <div class="positionnav">
+            <a class="listlogo" href="index.html"><img src="../img/logo.png" class="logo" /></a>
+            <ul class="nav-list">
+                <li>
+                    <a href="#">Countries</a>
+                    <ul class="nav-dropdown">
+                        <li>
+                            <a href="#">Morocco</a>
+                        </li>
+                        <li>
+                            <a href="#">South Korea</a>
+                        </li>
+                        <li>
+                            <a href="../sweden/sweden.html" class="navbordure">Sweden</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#!">Guides</a>
+                    <ul class="nav-dropdown">
+                        <li>
+                            <a href="#">Sabrine</a>
+                        </li>
+                        <li>
+                            <a href="#">Océane</a>
+                        </li>
+                        <li>
+                            <a href="../sweden/sweden.html" class="navbordure">Alexandre</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="connexion.php">Log In</a>
+                </li>
+                <li>
+                    <a href="inscription.php">Sign Up</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
 <body>
-    <h2>Inscription</h2><!--commentaire similaire à connexion-->
-    <form id="signupForm" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
-        <label for="login">Login</label>
-        <input type="text" name="login" id="login" required><br><br>
-        <label for="email">Email</label>
-        <input type="text" name="email" id="email" required><br><br>
-        <label for="password1">Password</label>
-        <input type="password" name="password1" id="password1" required><br><br>
-        <label for="confirmation-ps">Confirmation password</label>
-        <input type="password" name="confirmation-ps" id="confirmation-ps" required><br><br>
-        <button type="submit" name="signup" id="signup">S'inscrire</button>
-    </form>
-    <script src="script.js"></script>
+    <main>
+        <h2 class="lien" id="title">Inscription</h2><!--commentaire similaire à connexion-->
+        <form id="signupForm" method="post" class="lien" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+            <div>
+                <label for="login">Login</label>
+                <input type="text" name="login" id="login" required><br><br>
+                <label for="email">Email</label>
+                <input type="text" name="email" id="email" required><br><br>
+                <label for="password1">Password</label>
+                <input type="password" name="password1" id="password1" required><br><br>
+                <label for="confirmation-ps">Confirmation password</label>
+                <input type="password" name="confirmation-ps" id="confirmation-ps" required><br><br>
+            </div>
+            <div><button type="submit" name="signup" class="lien" id="signup">S'inscrire</button>
+            </div>
+        </form>
+    </main>
+    <footer>
+        <div class="placement_icon">
+            <img src="../img/icon/gmail.svg" alt="" class="icon" />
+            <img src="../img/icon/instagram.svg" alt="" class="icon" />
+            <img src="../img/icon/pinterest.svg" alt="" class="icon" />
+            <img src="../img/icon/twitter.svg" alt="" class="icon" />
+            <img src="../img/icon/youtube.svg" alt="" class="icon" />
+        </div>
+        <p>©Copyright 2024. Tous droits reservées.</p>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="../js/script.js"></script>
 </body>
+
 </html>

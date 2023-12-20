@@ -1,0 +1,51 @@
+@font-face {
+  font-family: "Irish Grover";
+  src: url("../../font/IrishGrover-Regular.ttf") format("truetype");
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+header {
+  min-height: 15vh;
+}
+main {
+  margin-top: 0;
+  margin-bottom: 10px;
+  min-height: 75vh;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.lien,
+.lien a:visited {
+  color: black;
+  text-decoration: none;
+  line-height: 1.5rem;
+  font-size: x-large;
+  margin-top: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 50px;
+  font-family: "Irish Grover";
+  background-image: url(../../img/bg-ricepaper.png);
+  border: 2px solid rgb(179, 154, 122);
+  border-radius: 25px;
+  min-width: 20rem;
+  text-align: end;
+}
+#signupForm{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 60%;
+}
+#signup, #loginForm, #confirm, #title, #hello{
+    width: 20%;
+    text-align: center;
+}
+footer {
+  bottom: 0;
+}
