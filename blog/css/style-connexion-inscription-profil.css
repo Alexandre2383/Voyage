@@ -2,17 +2,26 @@
   font-family: "Irish Grover";
   src: url("../../font/IrishGrover-Regular.ttf") format("truetype");
 }
-body {
-  margin: 0;
+body, html {
+  box-sizing: border-box;
+  height: 100%;
   padding: 0;
+  margin: 0;
+}
+
+.wrapper {
+  box-sizing: border-box;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 header {
-  min-height: 15vh;
+  min-height: 20vh;
+  flex-grow: 0;
+  flex-shrink: 0;
 }
 main {
-  margin-top: 0;
-  margin-bottom: 10px;
-  min-height: 75vh;
+  flex-grow: 1;
 }
 .container {
   display: flex;
@@ -34,18 +43,28 @@ main {
   border: 2px solid rgb(179, 154, 122);
   border-radius: 25px;
   min-width: 20rem;
-  text-align: end;
+  text-align: start;
 }
 #signupForm{
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-around;
     width: 60%;
+    margin-bottom: 20px;
 }
-#signup, #loginForm, #confirm, #title, #hello{
+#signup, #loginForm, #confirm, #title, #hello, #redirect{
     width: 20%;
     text-align: center;
 }
+.formBtn, .formPart{
+  margin:auto;
+  width: fit-content;
+}
+button:hover{
+  background: antiquewhite;
+}
 footer {
-  bottom: 0;
+  flex-grow: 0;
+  flex-shrink: 0;
+  width: 100%;
 }
