@@ -57,67 +57,71 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     <title>Inscription</title>
 </head>
 <header>
-    <nav class="nav">
-        <div class="nav-mobile">
-            <a id="nav-toggle" href="#!"><span></span></a>
-        </div>
-        <div class="positionnav">
-            <a class="listlogo" href="index.html"><img src="../img/logo.png" class="logo" /></a>
-            <ul class="nav-list">
-                <li>
-                    <a href="#">Countries</a>
-                    <ul class="nav-dropdown">
-                        <li>
-                            <a href="#">Morocco</a>
-                        </li>
-                        <li>
-                            <a href="#">South Korea</a>
-                        </li>
-                        <li>
-                            <a href="../sweden/sweden.html" class="navbordure">Sweden</a>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#!">Guides</a>
-                    <ul class="nav-dropdown">
-                        <li>
-                            <a href="#">Sabrine</a>
-                        </li>
-                        <li>
-                            <a href="#">Océane</a>
-                        </li>
-                        <li>
-                            <a href="../sweden/sweden.html" class="navbordure">Alexandre</a>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="connexion.php">Log In</a>
-                </li>
-                <li>
-                    <a href="inscription.php">Sign Up</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
+    <div class="wrapper">
+        <nav class="nav">
+            <div class="nav-mobile">
+                <a id="nav-toggle" href="#!"><span></span></a>
+            </div>
+            <div class="positionnav">
+                <a class="listlogo" href="index.html"><img src="../img/logo.png" class="logo" /></a>
+                <ul class="nav-list">
+                    <li>
+                        <a href="#">Countries</a>
+                        <ul class="nav-dropdown">
+                            <li>
+                                <a href="#">Morocco</a>
+                            </li>
+                            <li>
+                                <a href="#">South Korea</a>
+                            </li>
+                            <li>
+                                <a href="../sweden/sweden.html" class="navbordure">Sweden</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#!">Guides</a>
+                        <ul class="nav-dropdown">
+                            <li>
+                                <a href="#">Sabrine</a>
+                            </li>
+                            <li>
+                                <a href="#">Océane</a>
+                            </li>
+                            <li>
+                                <a href="../sweden/sweden.html" class="navbordure">Alexandre</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="connexion.php">Log In</a>
+                    </li>
+                    <li>
+                        <a href="inscription.php">Sign Up</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
 </header>
 
 <body>
     <main>
-        <h2 class="lien" id="title">Inscription</h2><!--commentaire similaire à connexion-->
+        <!--commentaire similaire à connexion-->
         <form id="signupForm" method="post" class="lien" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
-            <div>
-                <label for="login">Login</label>
+            <div class="formPart">
+                <h2 id="title">Inscription</h2>
+                <br>
+                <label for="login">Login</label><br>
                 <input type="text" name="login" id="login" required><br><br>
-                <label for="email">Email</label>
+                <label for="email">Email</label><br>
                 <input type="text" name="email" id="email" required><br><br>
-                <label for="password1">Password</label>
+                <label for="password1">Password</label><br>
                 <input type="password" name="password1" id="password1" required><br><br>
-                <label for="confirmation-ps">Confirmation password</label>
+                <label for="confirmation-ps">Confirmation password</label><br>
                 <input type="password" name="confirmation-ps" id="confirmation-ps" required><br><br>
             </div>
-            <div><button type="submit" name="signup" class="lien" id="signup">S'inscrire</button>
+            <div class="formBtn">
+                <button type="submit" name="signup" class="lien" id="signup">S'inscrire</button>
             </div>
         </form>
     </main>
@@ -131,6 +135,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         </div>
         <p>©Copyright 2024. Tous droits reservées.</p>
     </footer>
+    </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="../js/script.js"></script>
 </body>
