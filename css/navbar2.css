@@ -73,12 +73,13 @@ nav ul li ul li a {
 }
 .logo {
   border-radius: 15px;
-  width: 100%;
+  width: 80%;
 }
 .positionnav {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+  height: 70px;
 }
 .navbordure {
   border-bottom-right-radius: 15px;
