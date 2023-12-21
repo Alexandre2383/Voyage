@@ -59,9 +59,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/navbar2.css">
+    <link rel="stylesheet" href="../css/navbar.css">
     <link rel="stylesheet" href="../css/footer.css">
-    <link rel="stylesheet" href="./css/style-connexion-inscription-profil.css">
+    <link rel="stylesheet" href="css/style-connexion-inscription-profil.css">
     <title>Connexion</title>
 </head>
 <header>
@@ -76,13 +76,13 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                     <a href="#">Countries</a>
                     <ul class="nav-dropdown">
                         <li>
-                            <a href="#">Morocco</a>
+                            <a href="../morocco/morocco.html">Morocco</a>
                         </li>
                         <li>
                             <a href="#">South Korea</a>
                         </li>
                         <li>
-                            <a href="../sweden/sweden.html" class="navbordure">Sweden</a>
+                            <a href="../sweden.html" class="navbordure">Sweden</a>
                         </li>
                     </ul>
                 </li>
@@ -90,13 +90,13 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                     <a href="#!">Guides</a>
                     <ul class="nav-dropdown">
                         <li>
-                            <a href="#">Sabrine</a>
+                            <a href="../morocco/morocco.html">Sabrine</a>
                         </li>
                         <li>
                             <a href="#">Océane</a>
                         </li>
                         <li>
-                            <a href="../sweden/sweden.html" class="navbordure">Alexandre</a>
+                            <a href="../sweden.html" class="navbordure">Alexandre</a>
                         </li>
                     </ul>
                 </li>
@@ -133,7 +133,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         <p>©Copyright 2024. Tous droits reservées.</p>
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script src="../js/script.js"></script>
+    <script src="../js/navbar.js"></script>
 </body>
 
 </html>

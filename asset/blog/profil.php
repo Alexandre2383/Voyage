@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/navbar2.css">
+    <link rel="stylesheet" href="../css/navbar.css">
     <link rel="stylesheet" href="../css/footer.css">
-    <link rel="stylesheet" href="./css/style-connexion-inscription-profil.css">
+    <link rel="stylesheet" href="css/style-connexion-inscription-profil.css">
 
     <title>Profil</title>
 </head>
@@ -25,7 +25,7 @@
                             <a href="#">Countries</a>
                             <ul class="nav-dropdown">
                                 <li>
-                                    <a href="#">Morocco</a>
+                                    <a href="../morocco/morocco.html">Morocco</a>
                                 </li>
                                 <li>
                                     <a href="#">South Korea</a>
@@ -39,7 +39,7 @@
                             <a href="#!">Guides</a>
                             <ul class="nav-dropdown">
                                 <li>
-                                    <a href="#">Sabrine</a>
+                                    <a href="../morocco/morocco.html">Sabrine</a>
                                 </li>
                                 <li>
                                     <a href="#">Océane</a>
@@ -85,7 +85,7 @@
         </footer>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script src="../js/script.js"></script>
+    <script src="../js/navbar.js"></script>
 </body>
 
 </html>
