@@ -19,8 +19,8 @@ function connect()
 <?php
 define('DB_SERVER', 'localhost');
 define('DB_USERNAME', 'root');
-define('DB_PASSWORD', '');
-define('DB_NAME', 'blog_voyage');
+define('DB_PASSWORD', 'root');
+define('DB_NAME', 'Blog_Voyage');
 
 $conn = new mysqli(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
 

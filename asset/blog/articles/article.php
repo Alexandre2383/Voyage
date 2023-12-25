@@ -5,7 +5,11 @@ if(isset($_GET["id"]) && !empty(trim($_GET["id"]))){
     require_once "config.php";
     
     // Prepare a select statement
-    $sql = "SELECT * FROM articles WHERE id = ?";
+    $sql = "SELECT a.id, a.titre, a.article, a.id_utilisateur, a.id_categorie, a.date_time_publication, u.login AS utilisateur, c.nom AS categorie
+    FROM articles AS a
+    JOIN utilisateurs AS u ON a.id_utilisateur = u.id 
+    JOIN categories AS c ON a.id_categorie = c.id
+    WHERE a.id = ?";
     
     if($stmt = mysqli_prepare($conn, $sql)){
         // Bind variables to the prepared statement as parameters
@@ -68,7 +72,11 @@ if(isset($_GET["id"]) && !empty(trim($_GET["id"]))){
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12">
-                    <h1 class="mt-5 mb-3">View Article</h1>
+                    <h1 class="mt-5 mb-3">Article</h1>
+                    <div class="form-group">
+                        <label>Titre</label>
+                        <p><b><?php echo $row["titre"]; ?></b></p>
+                    </div>
                     <div class="form-group">
                         <label>Article</label>
                         <p><b><?php echo $row["article"]; ?></b></p>
@@ -78,8 +86,12 @@ if(isset($_GET["id"]) && !empty(trim($_GET["id"]))){
                         <p><b><?php echo $row["date_time_publication"]; ?></b></p>
                     </div>
                     <div class="form-group">
-                        <label>ID_utilisateur</label>
-                        <p><b><?php echo $row["id_utilisateur"]; ?></b></p>
+                        <label>Utilisateur</label>
+                        <p><b><?php echo $row["utilisateur"]; ?></b></p>
+                    </div>
+                    <div class="form-group">
+                        <label>Categorie</label>
+                        <p><b><?php echo $row["categorie"]; ?></b></p>
                     </div>
                     <p><a href="../articles.php" class="btn btn-primary">Back</a></p>
                 </div>

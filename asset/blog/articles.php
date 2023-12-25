@@ -23,13 +23,13 @@
                     <?php
                     require_once "articles/config.php";
 
-                    //Récupére l'ensemble des articles
                     $sql = "SELECT a.id, a.titre, a.article, a.id_utilisateur, a.id_categorie, a.date_time_publication, u.login AS utilisateur, c.nom AS categorie
-                    FROM articles AS a
-                    JOIN utilisateurs AS u ON a.id_utilisateur = u.id JOIN categories AS c ON a.id_categorie = c.id";
+                            FROM articles AS a
+                            JOIN utilisateurs AS u ON a.id_utilisateur = u.id JOIN categories AS c ON a.id_categorie = c.id";
 
                     $result = mysqli_query($conn, $sql);
-    
+
+
                     if ($result) {
                         if (mysqli_num_rows($result) > 0) {
                             echo '<table class="table table-bordered table-striped">';
@@ -45,13 +45,13 @@
                             echo "</thead>";
                             echo "<tbody>";
 
-                            while ($row = mysqli_fetch_array($result)) {
+                            while ($row = mysqli_fetch_assoc($result)) {
                                 echo "<tr>";
-                                echo "<td>" . $row['titre'] . "</td>";
-                                echo "<td>" . $row['article'] . "</td>";
-                                echo "<td>" . $row['utilisateur'] . "</td>";
-                                echo "<td>" . $row['categorie'] . "</td>";
-                                echo "<td>" . $row['date_time_publication'] . "</td>";
+                                echo "<td>" . htmlspecialchars($row['titre']) . "</td>";
+                                echo "<td>" . htmlspecialchars($row['article']) . "</td>";
+                                echo "<td>" . htmlspecialchars($row['utilisateur']) . "</td>";
+                                echo "<td>" . htmlspecialchars($row['categorie']) . "</td>";
+                                echo "<td>" . htmlspecialchars($row['date_time_publication']) . "</td>";
                                 echo "<td>";
                                 echo '<a href="articles/article.php?id=' . $row['id'] . '" class="mr-3" title="View Article" data-toggle="tooltip"><span class="fa fa-eye"></span></a>';
                                 echo '<a href="articles/modifier.php?id=' . $row['id'] . '" class="mr-3" title="Update Article" data-toggle="tooltip"><span class="fa fa-pencil"></span></a>';
@@ -67,7 +67,7 @@
                             echo '<div class="alert alert-danger"><em>No articles found.</em></div>';
                         }
                     } else {
-                        echo "Oops! Something went wrong. Please try again later.";
+                        echo '<div class="alert alert-danger">Oops! Something went wrong. Please try again later.</div>';
                     }
 
                     mysqli_close($conn);
