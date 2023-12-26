@@ -83,16 +83,61 @@ $conn->close();
     <meta charset="UTF-8">
     <title>Update Article</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <style>
-        .wrapper{
-            width: 600px;
-            margin: 0 auto;
-        }
-    </style>
+    <link rel="stylesheet" href="../css/style-connexion-inscription-profil.css">
+    <link rel="stylesheet" href="../../css/navbar.css">
+    <link rel="stylesheet" href="../../css/footer.css">
 </head>
 <body>
+<div class="wrapper">
+        <header>
+            <nav class="nav">
+                <div class="nav-mobile">
+                    <a id="nav-toggle" href="#!"><span></span></a>
+                </div>
+                <div class="positionnav">
+                    <a class="listlogo" href="../../../index.html"><img src="../../img/logo.png" class="logo" /></a>
+                    <ul class="nav-list">
+                        <li>
+                            <a href="#">Countries</a>
+                            <ul class="nav-dropdown">
+                                <li>
+                                    <a href="../../morocco/morocco.html">Morocco</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="navbordure">South Korea</a>
+                                </li> 
+                                <li>
+                                    <a href="../../sweden.html">Sweden</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#!">Guides</a>
+                            <ul class="nav-dropdown">
+                                <li>
+                                    <a href="../../morocco/morocco.html">Sabrine</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="navbordure">Océane</a>
+                                </li>
+                                <li>
+                                    <a href="../../sweden.html">Alexandre</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="../profil.php">Profil</a>
+                        </li>
+                        <li>
+                            <a href="../articles.php">Article</a>
+                        </li>
+                    </ul>
+                </div>
+                <script src="../js/navbar.js"></script>
+            </nav>
+        </header>
     <div class="wrapper">
-        <div class="container-fluid">
+        <div class="container-fluid" style="width: 600px;">
             <div class="row">
                 <div class="col-md-12">
                     <h2 class="mt-5">Modifier l'article</h2>
@@ -126,5 +171,17 @@ $conn->close();
             </div>        
         </div>
     </div>
+    <footer>
+            <div class="placement_icon">
+                <img src="../../img/icon/gmail.svg" alt="" class="icon" />
+                <img src="../../img/icon/instagram.svg" alt="" class="icon" />
+                <img src="../../img/icon/pinterest.svg" alt="" class="icon" />
+                <img src="../../img/icon/twitter.svg" alt="" class="icon" />
+                <img src="../../img/icon/youtube.svg" alt="" class="icon" />
+            </div>
+            <p>©Copyright 2024. Tous droits reservées.</p>
+        </footer>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script></div>
 </body>
 </html>

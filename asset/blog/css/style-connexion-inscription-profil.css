@@ -16,13 +16,14 @@ body, html {
   flex-direction: column;
 }
 header {
-  min-height: 20vh;
+  min-height: 50px;
   flex-grow: 0;
   flex-shrink: 0;
 }
 main {
   flex-grow: 1;
 }
+/* .container est class du fichier profil.php; div qui contient l'affichage en fonction du login */
 .container {
   display: flex;
   flex-direction: column;
