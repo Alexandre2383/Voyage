@@ -11,9 +11,9 @@ $articleErr = $titleErr = $authorErr = $categoryErr = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Sanitize and validate inputs
-    $article = isset($_POST['content']) ? htmlspecialchars($_POST['content']) : '';
-    $title = isset($_POST['title']) ? htmlspecialchars($_POST['title']) : '';
-    $author = isset($_POST['author']) ? htmlspecialchars($_POST['author']) : '';
+    htmlspecialchars($article = isset($_POST['content']) ? $_POST['content'] : '');
+    htmlspecialchars($title = isset($_POST['title']) ? $_POST['title'] : '');
+    htmlspecialchars($author = isset($_POST['author']) ? $_POST['author'] : '');
     $category = isset($_POST['category']) ? intval($_POST['category']) : 0;
 
     // Validate inputs
@@ -50,9 +50,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Execute the statement
         if ($stmt->execute()) {
             $last_id = $stmt->insert_id;
-            echo "<p>New article created successfully with ID: $last_id</p>";
+            echo "<p>New article created successfully</p>";
             // Redirect to articles.php after successful submission
-            header("Location: articles.php");
+            header("Refresh: 3; url=../articles.php");
+            // header("Refresh: 5; url=page2.php");
             exit(); // Ensure that no more output is sent
         } else {
             echo "<p>Error creating article.</p>";
@@ -113,7 +114,7 @@ $conn->close();
                         <span class="text-danger"><?php echo $categoryErr; ?></span><br><br>
 
                         <input type="submit" class="btn btn-primary" value="Submit">
-                        <a href="../articles.php" class="btn btn-secondary ml-2">Cancel</a>
+                        <a href="articles.php" class="btn btn-secondary ml-2">Cancel</a>
                     </form>
                 </div>
             </div>        
@@ -121,4 +122,3 @@ $conn->close();
     </div>
 </body>
 </html>
-<!-- /Applications/MAMP/htdocs/Voyage-copy/asset/blog/articles/creer-article.php -->

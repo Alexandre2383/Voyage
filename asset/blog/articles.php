@@ -6,12 +6,55 @@
     <title>Dashboard</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
 
 <body>
+    <header style="height: 50px;">
+        <nav class="nav">
+            <div class="nav-mobile">
+                <a id="nav-toggle" href="#!"><span></span></a>
+            </div>
+            <div class="positionnav">
+                <a class="listlogo" href="../index.html"><img src="../img/logo.png" class="logo" /></a>
+                <ul class="nav-list">
+                    <li>
+                        <a href="#">Countries</a>
+                        <ul class="nav-dropdown">
+                            <li>
+                                <a href="morocco/morocco.html">Morocco</a>
+                            </li>
+                            <li>
+                                <a href="#" class="navbordure">South Korea</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#!">Guides</a>
+                        <ul class="nav-dropdown">
+                            <li>
+                                <a href="morocco/morocco.html">Sabrine</a>
+                            </li>
+                            <li>
+                                <a href="#" class="navbordure">Océane</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="profil.php">Profil</a>
+                    </li>
+                    <li>
+                        <a href="inscription.php">Sign out</a>
+                    </li>
+                </ul>
+            </div>
+            <script src="../js/navbar.js"></script>
+        </nav>
+    </header>
     <div class="wrapper">
         <div class="container-fluid">
             <div class="row">
@@ -48,10 +91,10 @@
                             while ($row = mysqli_fetch_assoc($result)) {
                                 echo "<tr>";
                                 echo "<td>" . htmlspecialchars($row['titre']) . "</td>";
-                                echo "<td>" . htmlspecialchars($row['article']) . "</td>";
+                                echo "<td>" . htmlentities($row['article']) . "</td>";
                                 echo "<td>" . htmlspecialchars($row['utilisateur']) . "</td>";
                                 echo "<td>" . htmlspecialchars($row['categorie']) . "</td>";
-                                echo "<td>" . htmlspecialchars($row['date_time_publication']) . "</td>";
+                                echo "<td>" . $row['date_time_publication'] . "</td>";
                                 echo "<td>";
                                 echo '<a href="articles/article.php?id=' . $row['id'] . '" class="mr-3" title="View Article" data-toggle="tooltip"><span class="fa fa-eye"></span></a>';
                                 echo '<a href="articles/modifier.php?id=' . $row['id'] . '" class="mr-3" title="Update Article" data-toggle="tooltip"><span class="fa fa-pencil"></span></a>';

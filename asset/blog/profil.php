@@ -50,7 +50,7 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="connexion.php">Profil</a>
+                            <a href="articles.php">Article</a>
                         </li>
                         <li>
                             <a href="inscription.php">Sign out</a>
