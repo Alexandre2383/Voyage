@@ -64,74 +64,76 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     <link rel="stylesheet" href="css/style-connexion-inscription-profil.css">
     <title>Connexion</title>
 </head>
-<header>
-    <nav class="nav">
-        <div class="nav-mobile">
-            <a id="nav-toggle" href="#!"><span></span></a>
-        </div>
-        <div class="positionnav">
-            <a class="listlogo" href="index.html"><img src="../img/logo.png" class="logo" /></a>
-            <ul class="nav-list">
-                <li>
-                    <a href="#">Countries</a>
-                    <ul class="nav-dropdown">
-                        <li>
-                            <a href="../morocco/morocco.html">Morocco</a>
-                        </li>
-                        <li>
-                            <a href="#">South Korea</a>
-                        </li>
-                        <li>
-                            <a href="../sweden.html" class="navbordure">Sweden</a>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#!">Guides</a>
-                    <ul class="nav-dropdown">
-                        <li>
-                            <a href="../morocco/morocco.html">Sabrine</a>
-                        </li>
-                        <li>
-                            <a href="#">Océane</a>
-                        </li>
-                        <li>
-                            <a href="../sweden.html" class="navbordure">Alexandre</a>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="connexion.php">Log In</a>
-                </li>
-                <li>
-                    <a href="inscription.php">Sign Up</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-</header>
 
 <body>
-    <main>
-        <h2 class="lien" id="title">Connexion</h2>
-        <form id="loginForm" class="lien" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>"><!--Prévention d'injection de code dans le formulaire avec htmlspecialchars-->
-            <label for="email">Email</label>
-            <input type="text" name="email" id="email" required><br><br><!--required redirege l'utilisateur sur l'input si il clique sur submit sans écrire-->
-            <label for="password">Password</label>
-            <input type="password" name="password" id="password" required><br><br>
-            <button type="submit" name="confirm" class="lien" id="confirm">Se connecter</button>
-        </form>
-    </main>
-    <footer>
-        <div class="placement_icon">
-            <img src="../img/icon/gmail.svg" alt="" class="icon" />
-            <img src="../img/icon/instagram.svg" alt="" class="icon" />
-            <img src="../img/icon/pinterest.svg" alt="" class="icon" />
-            <img src="../img/icon/twitter.svg" alt="" class="icon" />
-            <img src="../img/icon/youtube.svg" alt="" class="icon" />
-        </div>
-        <p>©Copyright 2024. Tous droits reservées.</p>
-    </footer>
+    <div class="wrapper">
+        <header>
+            <nav class="nav">
+                <div class="nav-mobile">
+                    <a id="nav-toggle" href="#!"><span></span></a>
+                </div>
+                <div class="positionnav">
+                    <a class="listlogo" href="index.html"><img src="../img/logo.png" class="logo" /></a>
+                    <ul class="nav-list">
+                        <li>
+                            <a href="#">Countries</a>
+                            <ul class="nav-dropdown">
+                                <li>
+                                    <a href="../morocco/morocco.html">Morocco</a>
+                                </li>
+                                <li>
+                                    <a href="#">South Korea</a>
+                                </li>
+                                <li>
+                                    <a href="../sweden.html" class="navbordure">Sweden</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#!">Guides</a>
+                            <ul class="nav-dropdown">
+                                <li>
+                                    <a href="../morocco/morocco.html">Sabrine</a>
+                                </li>
+                                <li>
+                                    <a href="#">Océane</a>
+                                </li>
+                                <li>
+                                    <a href="../sweden.html" class="navbordure">Alexandre</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="connexion.php">Log In</a>
+                        </li>
+                        <li>
+                            <a href="inscription.php">Sign Up</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <form id="loginForm" class="lien" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>"><!--Prévention d'injection de code dans le formulaire avec htmlspecialchars-->
+                <h2>Connexion</h2>
+                <label for="email">Email</label>
+                <input type="text" name="email" id="email" required><br><br><!--required redirege l'utilisateur sur l'input si il clique sur submit sans écrire-->
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" required><br><br>
+                <button type="submit" name="confirm" class="lien" id="confirm">Se connecter</button>
+            </form>
+        </main>
+        <footer>
+            <div class="placement_icon">
+                <img src="../img/icon/gmail.svg" alt="" class="icon" />
+                <img src="../img/icon/instagram.svg" alt="" class="icon" />
+                <img src="../img/icon/pinterest.svg" alt="" class="icon" />
+                <img src="../img/icon/twitter.svg" alt="" class="icon" />
+                <img src="../img/icon/youtube.svg" alt="" class="icon" />
+            </div>
+            <p>©Copyright 2024. Tous droits reservées.</p>
+        </footer>
+    </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="../js/navbar.js"></script>
 </body>

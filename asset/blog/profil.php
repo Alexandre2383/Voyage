@@ -65,8 +65,15 @@
                 session_start();
                 if (isset($_SESSION['login'])) { //si le prenom après la connexion est défini
                     $prenom = $_SESSION['login'];
-                    echo "<p class='lien' id='hello'>Bonjour $prenom</p>"; //affiche Bonjour $prenom
-                    echo "<a href='../index.html' class='lien'>retour à la page principal</a>";
+                    //grille du profil 1:img, 2:modifier profil, 3:voir mes articles
+                    echo "<div class='profil'>
+                    <h1 id='hello'>Welcome board $prenom !</h1>
+                    <p id='1'><img src='../img/animalferocealex.jpg' class='img-profil'></p>
+                    <p id='2'>Voir mes articles</p>
+                    <p id='3'>Modifier profil</p>
+                    <p id='4'></p>
+                    </div>";
+                    
                 } else {
                     echo '<a id="redirect" href="inscription.php" class="lien">Inscription</a>'; //sinon renvoie sur le lien de l'inscription, ou de connexion
                     echo '<a id="redirect" href="connexion.php" class="lien">Connexion</a>';
