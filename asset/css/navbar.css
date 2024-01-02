@@ -1,11 +1,8 @@
-@font-face {
-  font-family: "Irish Grover";
-  src: url("../font/IrishGrover-Regular.ttf") format("truetype");
-}
+@import url(https://fonts.googleapis.com/css?family=Raleway:700);
 /* Font class------------------------------------------------------------------- */
 .nav {
   align-items: center;
-  font-family: "Irish Grover";
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: clamp(1.2rem, 2vw, 1.5rem);
   position: fixed;
   width: 100%;
@@ -13,7 +10,7 @@
   right: 0;
   z-index: 5;
   min-height: 80px;
-  background: url("../img/bg-ricepaper.png");
+  background: rgb(239, 239, 239);
   color: black;
   border-end-start-radius: 25px;
   border-end-end-radius: 25px;
@@ -33,13 +30,13 @@ nav ul li a:visited {
   padding: 0 20px;
   line-height: 70px;
   color: black;
-  background-image: url("../img/bg-ricepaper.png");
+  background: rgb(239, 239, 239);
   text-decoration: none;
 }
 nav ul li a:hover,
 nav ul li a:visited:hover {
-  background: antiquewhite;
-  color: black;
+  background: rgb(168, 168, 168);
+  color: rgb(239, 239, 239);
 }
 nav ul li a:not(:only-child):after,
 nav ul li a:visited:not(:only-child):after {

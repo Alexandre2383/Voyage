@@ -1,6 +1,6 @@
 /* Image Background <- dossier image */
 footer{
-    background-image: url('../img/bg-ricepaper.png');
+    background: rgb(239, 239, 239);
     min-height: 8vh;
     color: black;
     text-align: center;
