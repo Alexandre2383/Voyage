@@ -1,0 +1,226 @@
+body {
+    font-family: "Century Gothic", 'Lato', sans-serif;
+   
+}
+
+.et-hero-tab {
+text-decoration: none;
+}
+
+.et-hero-tabs,
+.et-slide {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+height: 100vh;
+position: relative;
+background: #eee;
+
+    text-align: center;
+    padding: 0 2em;
+h1 {
+    font-size: 2rem;
+    margin: 0;
+    letter-spacing: 1rem;
+}
+h3 {
+    font-size: 1rem;
+    letter-spacing: 0.3rem;
+    opacity: 0.6;
+}
+ul {
+    font-size: 1rem;
+    margin: 0;
+}
+}
+
+.et-hero-tabs-container {
+display: flex;
+flex-direction: row;
+position: absolute;
+bottom: 0;
+width: 100%;
+height: 70px;
+box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+background: #fff;
+z-index: 10;
+&--top {
+    position: fixed;
+    top: 0;
+}
+}
+
+.et-hero-tab {
+display: flex;
+justify-content: center;
+align-items: center;
+flex: 1;
+color: #000;
+letter-spacing: 0.1rem;
+    transition: all 0.5s ease;
+    font-size: 0.8rem;
+  &:hover {
+        color:white;
+  background: rgba(102,177,241,0.8);
+        transition: all 0.5s ease;
+}
+}
+
+.et-hero-tab-slider {
+position: absolute;
+bottom: 0;
+width: 0;
+height: 6px;
+background: #66B1F1;
+transition: left 0.3s ease;
+}
+
+@media (min-width: 800px) {
+.et-hero-tabs,
+.et-slide {
+h1 {
+    font-size: 3rem;
+}
+h3 {
+    font-size: 1rem;
+}
+ul {
+    font-size: 1rem;
+}
+}
+.et-hero-tab {
+    font-size: 1rem;
+}
+}
+
+.imagekorea {
+    width: 100%;
+    height: 100%;
+}
+
+@media (max-width:400px) {
+    .imagekorea
+     {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+#tab-corée {
+background-color: #000000;
+background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+url(/asset/korea/image/korea.jpg);
+background-position: center;
+background-size: cover;
+color: #ffffff;
+padding: 1em;
+text-align: center;
+}
+
+#tab-seoul {
+background-color: #000000;
+background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+url(/asset/korea/image/seoul.jpg);
+background-position: center;
+background-size: cover;
+color: #ffffff;
+padding: 1em;
+text-align: center;
+}
+
+#tab-busan {
+    background-color: #000000;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url(/asset/korea/image/busan.jpg);
+    background-position: center;
+    background-size: cover;
+    color: #ffffff;
+    padding: 1em;
+    text-align: center;
+}
+
+#tab-gyeongju {
+    background-color: #000000;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url(/asset/korea/image/gyeongju.jpeg);
+    background-position: center;
+    background-size: cover;
+    color: #ffffff;
+    padding: 1em;
+    text-align: center;
+}
+
+#tab-jeju {
+    background-color: #000000;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url(/asset/korea/image/Jeju.jpg);
+    background-position: center;
+    background-size: cover;
+    color: #ffffff;
+    padding: 1em;
+    text-align: center;
+}
+
+#tab-incheon {
+    background-color: #000000;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url(/asset/korea/image/incheon.jpg);
+    background-position: center;
+    background-size: cover;
+    color: #ffffff;
+    padding: 1em;
+    text-align: center;
+}
+
+#tab-daegu {
+    background-color: #000000;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url(/asset/korea/image/daegu.jpg);
+    background-position: center;
+    background-size: cover;
+    color: #ffffff;
+    padding: 1em;
+    text-align: center;
+}
+
+#tab-daejeon {
+    background-color: #000000;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url(/asset/korea/image/Daejeon.jpg);
+    background-position: center;
+    background-size: cover;
+    color: #ffffff;
+    padding: 1em;
+    text-align: center;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+#scrollToTopButton {
+    display: block;
+    z-index: 99;
+    transition: background-color 0.3s, opacity 0.5s, visibility 0.5s;
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    border: none;
+    border-radius: 4px;
+    outline: none;
+    width: 50px;
+    height: 50px;
+    padding: 8px;
+    background-color: #333333bf;
+  }
+ 
+  #scrollToTopButton:hover,
+  #scrollToTopButton:focus,
+  #scrollToTopButton:focus-within {
+    cursor: pointer;
+    background-color: #0078b4;
+  }
