@@ -108,31 +108,31 @@ ul {
 }
 
 #tab-corée {
-background-color: #000000;
-background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-url(/asset/korea/image/korea.jpg);
-background-position: center;
-background-size: cover;
-color: #ffffff;
-padding: 1em;
-text-align: center;
+    background-color: #000000;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url(/asset/korea/image/coree-sud.jpg);
+    background-position: center;
+    background-size: cover;
+    color: #ffffff;
+    padding: 1em;
+    text-align: center;
 }
 
 #tab-seoul {
-background-color: #000000;
-background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-url(/asset/korea/image/seoul.jpg);
-background-position: center;
-background-size: cover;
-color: #ffffff;
-padding: 1em;
-text-align: center;
+    background-color: #000000;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url(/asset/korea/image/seoul.jpg);
+    background-position: center;
+    background-size: cover;
+    color: #ffffff;
+    padding: 1em;
+    text-align: center;
 }
 
 #tab-busan {
     background-color: #000000;
     background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url(/asset/korea/image/busan.jpg);
+    url(/asset/korea/image/coree-sud.jpg);
     background-position: center;
     background-size: cover;
     color: #ffffff;
